@@ -1,5 +1,5 @@
 # Descomplicando GitHub Actions
-Add Lab
+Add Lab 2
 
 Se inscreva na aula ao vivo e gratuita: https://quiz.linuxtips.io/github-actions
 
