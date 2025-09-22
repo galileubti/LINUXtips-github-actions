@@ -40,7 +40,7 @@ jobs:
           echo "coverage=$COVERAGE" >> $GITHUB_OUTPUT
 
       - name: "Validar cobertura mínima"
-        if: ${{steps.coverage.outputs.coverage < env.COVERAGE_MIN }}
+        if: ${{ fromJSON(steps.coverage.outputs.coverage) < fromJSON(env.COVERAGE_MIN) }}
         run: |
           echo "Validando cobertura mínima de ${{ env.COVERAGE_MIN }}%..."
           COVERAGE=$(echo "${{ steps.coverage.outputs.coverage }}" | awk '{print int($1+0.5)}')
